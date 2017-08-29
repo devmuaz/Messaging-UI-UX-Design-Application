@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="development.MainFrameController">
+   <children>
+      <AnchorPane layoutX="42.0" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="426.0" style="-fx-background-color: ;">
+         <children>
+            <AnchorPane fx:id="ap_top" prefHeight="81.0" prefWidth="426.0" style="-fx-background-color: white; -fx-background-radius: 3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView layoutX="34.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/users.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="142.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/message.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="249.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/call.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="355.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/settings.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton onAction="#ShowUsers" prefHeight="85.0" prefWidth="107.0" ripplerFill="#5ca9d3" text=" " />
+                  <JFXButton layoutX="106.0" onAction="#ShowMessages" prefHeight="85.0" prefWidth="107.0" ripplerFill="#5ca9d3" text=" " />
+                  <JFXButton layoutX="213.0" onAction="#ShowCalls" prefHeight="85.0" prefWidth="107.0" ripplerFill="#5ca9d3" text=" " />
+                  <JFXButton layoutX="319.0" onAction="#ShowSettings" prefHeight="85.0" prefWidth="107.0" ripplerFill="#5ca9d3" text=" " />
+               </children>
+            </AnchorPane>
+            <Pane fx:id="pnl1" layoutY="85.0" prefHeight="13.0" prefWidth="107.0" style="-fx-background-color: #039BE5; -fx-background-radius: 2;" />
+            <Pane fx:id="pnl2" layoutX="106.0" layoutY="85.0" prefHeight="13.0" prefWidth="107.0" style="-fx-background-color: #039BE5; -fx-background-radius: 2;" visible="false" />
+            <Pane fx:id="pnl3" layoutX="213.0" layoutY="85.0" prefHeight="13.0" prefWidth="107.0" style="-fx-background-color: #039BE5; -fx-background-radius: 2;" visible="false" />
+            <Pane fx:id="pnl4" layoutX="320.0" layoutY="85.0" prefHeight="13.0" prefWidth="106.0" style="-fx-background-color: #039BE5; -fx-background-radius: 2;" visible="false" />
+            <AnchorPane fx:id="calls_pnl" layoutY="97.0" onMouseDragged="#OnMouseDragged" onMousePressed="#OnMousePressed" prefHeight="478.0" prefWidth="426.0" style="-fx-background-color: white; -fx-background-radius: 3;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+               <children>
+                  <ImageView layoutX="163.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/info.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="95.0" layoutY="363.0" prefHeight="40.0" prefWidth="236.0" ripplerFill="#5ca9d3" text="START FREE CALL NOW" textFill="#5ca9d3">
+                     <font>
+                        <Font name="Roboto" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="189.0" prefHeight="69.0" prefWidth="310.0" text="No recently calls you've made...You can make free call now " textAlignment="CENTER" textFill="#5ca9d3" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane fx:id="messages_pnl" layoutY="97.0" onMouseDragged="#OnMouseDragged" onMousePressed="#OnMousePressed" prefHeight="478.0" prefWidth="426.0" style="-fx-background-color: white; -fx-background-radius: 3;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+               <children>
+                  <ImageView layoutX="163.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/info.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="95.0" layoutY="363.0" prefHeight="40.0" prefWidth="236.0" ripplerFill="#5ca9d3" text="START MESSAGING NOW" textFill="#5ca9d3">
+                     <font>
+                        <Font name="Roboto" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="189.0" prefHeight="69.0" prefWidth="310.0" text="There are no messages here, you can start now by choosing a specific user and start messaging" textAlignment="CENTER" textFill="#5ca9d3" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="users_pnl" layoutY="97.0" onMouseDragged="#OnMouseDragged" onMousePressed="#OnMousePressed" prefHeight="478.0" prefWidth="426.0" style="-fx-background-color: white; -fx-background-radius: 3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+               <children>
+                  <ImageView layoutX="163.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/info.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="95.0" layoutY="363.0" prefHeight="40.0" prefWidth="236.0" ripplerFill="#5ca9d3" text="NO CONTACTS EVEN NOW" textFill="#5ca9d3">
+                     <font>
+                        <Font name="Roboto" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="189.0" prefHeight="69.0" prefWidth="310.0" text="No recentlly contact users have been added click below button to add some!" textAlignment="CENTER" textFill="#5ca9d3" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="settings_pnl" layoutY="97.0" onMouseDragged="#OnMouseDragged" onMousePressed="#OnMousePressed" prefHeight="478.0" prefWidth="426.0" style="-fx-background-color: white; -fx-background-radius: 3;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+               <children>
+                  <JFXToggleButton layoutX="30.0" layoutY="212.0" prefHeight="29.0" prefWidth="71.0" text=" " textAlignment="CENTER" toggleColor="#039be5" unToggleLineColor="#d3d3d3">
+                     <font>
+                        <Font name="Roboto" size="1.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <Pane layoutX="51.0" layoutY="40.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-background-color: white;">
+                     <effect>
+                        <DropShadow color="#0000004a" height="40.0" radius="19.5" width="40.0" />
+                     </effect>
+                     <children>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imgs/profile.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label contentDisplay="CENTER" layoutX="174.0" layoutY="90.0" prefHeight="20.0" prefWidth="83.0" text="\@username" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="174.0" layoutY="68.0" prefHeight="20.0" prefWidth="134.0" text="AbdulMuaz Aqeel" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="21.0" layoutY="159.0" prefHeight="40.0" prefWidth="160.0" ripplerFill="#5ca9d3" text="CHANGE PICTURE" textFill="#5ca9d3">
+                     <font>
+                        <Font name="Roboto" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label contentDisplay="CENTER" layoutX="101.0" layoutY="229.0" prefHeight="20.0" prefWidth="236.0" text="Clear old messages each 2 months" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton layoutX="28.0" layoutY="255.0" prefHeight="13.0" prefWidth="76.0" selected="true" text=" " textAlignment="CENTER" toggleColor="#039be5" unToggleLineColor="#d3d3d3">
+                     <font>
+                        <Font name="Roboto" size="1.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <Label contentDisplay="CENTER" layoutX="101.0" layoutY="270.0" prefHeight="20.0" prefWidth="209.0" text="Keep me online while connected" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton layoutX="28.0" layoutY="298.0" prefHeight="13.0" prefWidth="76.0" selected="true" text=" " textAlignment="CENTER" toggleColor="#039be5" unToggleLineColor="#d3d3d3">
+                     <font>
+                        <Font name="Roboto" size="1.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <Label contentDisplay="CENTER" layoutX="101.0" layoutY="313.0" prefHeight="20.0" prefWidth="174.0" text="Get windows notifications" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton layoutX="30.0" layoutY="341.0" prefHeight="13.0" prefWidth="76.0" selected="true" text=" " textAlignment="CENTER" toggleColor="#039be5" unToggleLineColor="#d3d3d3">
+                     <font>
+                        <Font name="Roboto" size="1.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <Label contentDisplay="CENTER" layoutX="103.0" layoutY="356.0" prefHeight="20.0" prefWidth="174.0" text="Save media automatically" textFill="#5ca9d3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink layoutX="24.0" layoutY="425.0" prefHeight="33.0" prefWidth="154.0" text="Privacy and Security" textFill="#5ca9d3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="184.0" layoutY="425.0" prefHeight="33.0" prefWidth="100.0" text="Block Users" textFill="#5ca9d3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="336.0" layoutY="425.0" onAction="#Exit" prefHeight="33.0" prefWidth="76.0" text="CLOSE" textFill="#5ca9d3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#00000021" height="60.0" radius="29.5" width="60.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
